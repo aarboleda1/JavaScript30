@@ -71,12 +71,12 @@ const playSound = (e) => {
 };
 
 
-const removeTransition = (e) => {
+var removeTransition = function (e) {
   if (e.propertyName !== 'transform') {
     return; //skip if not a transition
   }
-  
-  e.target.classList.remove('playing');
+
+  this.classList.remove('playing');
 };
 
 const keys = Array.from(document.querySelectorAll('.key'));
